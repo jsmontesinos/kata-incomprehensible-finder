@@ -37,7 +37,7 @@ public class FinderTests {
 		List<Person> list = new ArrayList<Person>();
 		Finder finder = new Finder(list);
 
-		SearchResult result = finder.Find(SearchType.One);
+		SearchResult result = finder.Find(SearchType.Minimum);
 		assertEquals(null, result.person1);
 
 		assertEquals(null, result.person2);
@@ -50,7 +50,7 @@ public class FinderTests {
 
 		Finder finder = new Finder(list);
 
-		SearchResult result = finder.Find(SearchType.One);
+		SearchResult result = finder.Find(SearchType.Minimum);
 
 		assertEquals(null, result.person1);
 		assertEquals(null, result.person2);
@@ -63,7 +63,7 @@ public class FinderTests {
 		list.add(greg);
 		Finder finder = new Finder(list);
 
-		SearchResult result = finder.Find(SearchType.One);
+		SearchResult result = finder.Find(SearchType.Minimum);
 
 		assertEquals(sue, result.person1);
 		assertEquals(greg, result.person2);
@@ -77,7 +77,7 @@ public class FinderTests {
 
 		Finder finder = new Finder(list);
 
-		SearchResult result = finder.Find(SearchType.Two);
+		SearchResult result = finder.Find(SearchType.Maximum);
 
 		assertEquals(greg, result.person1);
 		assertEquals(mike, result.person2);
@@ -92,7 +92,7 @@ public class FinderTests {
 		list.add(greg);
 		Finder finder = new Finder(list);
 
-		SearchResult result = finder.Find(SearchType.Two);
+		SearchResult result = finder.Find(SearchType.Maximum);
 
 		assertEquals(sue, result.person1);
 		assertEquals(sarah, result.person2);
@@ -108,7 +108,7 @@ public class FinderTests {
 
 		Finder finder = new Finder(list);
 
-		SearchResult result = finder.Find(SearchType.One);
+		SearchResult result = finder.Find(SearchType.Minimum);
 
 		assertEquals(sue, result.person1);
 		assertEquals(greg, result.person2);

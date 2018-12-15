@@ -34,13 +34,13 @@ public class Finder {
 		SearchResult answer = searchResultList.get(0);
 		for (SearchResult result : searchResultList) {
 			switch (searchType) {
-				case One :
+				case Minimum:
 					if (result.dateDiff < answer.dateDiff) {
 						answer = result;
 					}
 					break;
 
-				case Two :
+				case Maximum:
 					if (result.dateDiff > answer.dateDiff) {
 						answer = result;
 					}
