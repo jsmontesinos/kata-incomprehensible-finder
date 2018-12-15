@@ -1,6 +1,6 @@
 package algorithm;
 public class SearchResult {
-	public Person P1;
-	public Person P2;
-	public long D;
+	public Person person1;
+	public Person person2;
+	public long dateDiff;
 }
