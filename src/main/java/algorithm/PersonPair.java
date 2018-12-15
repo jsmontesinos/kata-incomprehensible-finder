@@ -1,5 +1,5 @@
 package algorithm;
-public class SearchResult {
+public class PersonPair {
 	public Person person1;
 	public Person person2;
 	public long dateDiff;

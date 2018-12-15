@@ -9,30 +9,30 @@ public class Finder {
 		this.people = people;
 	}
 
-	public SearchResult Find(SearchType searchType) {
-		List<SearchResult> searchResultList = new ArrayList<SearchResult>();
+	public PersonPair Find(SearchType searchType) {
+		List<PersonPair> personPairList = new ArrayList<PersonPair>();
 
 		for (int i = 0; i < people.size() - 1; i++) {
 			for (int j = i + 1; j < people.size(); j++) {
-				SearchResult r = new SearchResult();
+				PersonPair personPair = new PersonPair();
 				if (people.get(i).birthDate.getTime() < people.get(j).birthDate.getTime()) {
-					r.person1 = people.get(i);
-					r.person2 = people.get(j);
+					personPair.person1 = people.get(i);
+					personPair.person2 = people.get(j);
 				} else {
-					r.person1 = people.get(j);
-					r.person2 = people.get(i);
+					personPair.person1 = people.get(j);
+					personPair.person2 = people.get(i);
 				}
-				r.dateDiff = r.person2.birthDate.getTime() - r.person1.birthDate.getTime();
-				searchResultList.add(r);
+				personPair.dateDiff = personPair.person2.birthDate.getTime() - personPair.person1.birthDate.getTime();
+				personPairList.add(personPair);
 			}
 		}
 
-		if (searchResultList.size() < 1) {
-			return new SearchResult();
+		if (personPairList.size() < 1) {
+			return new PersonPair();
 		}
 
-		SearchResult answer = searchResultList.get(0);
-		for (SearchResult result : searchResultList) {
+		PersonPair answer = personPairList.get(0);
+		for (PersonPair result : personPairList) {
 			switch (searchType) {
 				case Minimum:
 					if (result.dateDiff < answer.dateDiff) {

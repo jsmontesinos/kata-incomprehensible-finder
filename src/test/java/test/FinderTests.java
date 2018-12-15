@@ -8,7 +8,7 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import algorithm.SearchResult;
+import algorithm.PersonPair;
 import algorithm.SearchType;
 import algorithm.Finder;
 import algorithm.Person;
@@ -37,7 +37,7 @@ public class FinderTests {
 		List<Person> list = new ArrayList<Person>();
 		Finder finder = new Finder(list);
 
-		SearchResult result = finder.Find(SearchType.Minimum);
+		PersonPair result = finder.Find(SearchType.Minimum);
 		assertEquals(null, result.person1);
 
 		assertEquals(null, result.person2);
@@ -50,7 +50,7 @@ public class FinderTests {
 
 		Finder finder = new Finder(list);
 
-		SearchResult result = finder.Find(SearchType.Minimum);
+		PersonPair result = finder.Find(SearchType.Minimum);
 
 		assertEquals(null, result.person1);
 		assertEquals(null, result.person2);
@@ -63,7 +63,7 @@ public class FinderTests {
 		list.add(greg);
 		Finder finder = new Finder(list);
 
-		SearchResult result = finder.Find(SearchType.Minimum);
+		PersonPair result = finder.Find(SearchType.Minimum);
 
 		assertEquals(sue, result.person1);
 		assertEquals(greg, result.person2);
@@ -77,7 +77,7 @@ public class FinderTests {
 
 		Finder finder = new Finder(list);
 
-		SearchResult result = finder.Find(SearchType.Maximum);
+		PersonPair result = finder.Find(SearchType.Maximum);
 
 		assertEquals(greg, result.person1);
 		assertEquals(mike, result.person2);
@@ -92,7 +92,7 @@ public class FinderTests {
 		list.add(greg);
 		Finder finder = new Finder(list);
 
-		SearchResult result = finder.Find(SearchType.Maximum);
+		PersonPair result = finder.Find(SearchType.Maximum);
 
 		assertEquals(sue, result.person1);
 		assertEquals(sarah, result.person2);
@@ -108,7 +108,7 @@ public class FinderTests {
 
 		Finder finder = new Finder(list);
 
-		SearchResult result = finder.Find(SearchType.Minimum);
+		PersonPair result = finder.Find(SearchType.Minimum);
 
 		assertEquals(sue, result.person1);
 		assertEquals(greg, result.person2);
