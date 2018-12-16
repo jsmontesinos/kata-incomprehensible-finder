@@ -12,11 +12,7 @@ public class Finder {
 	public PersonPair Find(SearchType searchType) {
 		List<PersonPair> personPairList = getPersonPairs();
 
-		if (personPairList.size() < 1) {
-			return new PersonPair();
-		}
-
-		return calculatePairAccordingType(searchType, personPairList);
+		return personPairList.isEmpty() ? new PersonPair() : calculatePairAccordingType(searchType, personPairList);
 	}
 
 	private PersonPair calculatePairAccordingType(SearchType searchType, List<PersonPair> personPairList) {
