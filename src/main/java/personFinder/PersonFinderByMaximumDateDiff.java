@@ -8,13 +8,16 @@ public class PersonFinderByMaximumDateDiff extends PersonFinder {
         super(people);
     }
 
-    protected PersonPair findPair(SearchType searchType, List<PersonPair> personPairList) {
-        PersonPair answer = personPairList.get(0);
-        for (PersonPair result : personPairList) {
-            if (result.dateDiff > answer.dateDiff) {
-                answer = result;
-            }
-        }
-        return answer;
+    protected PersonPair findPair() {
+        List<Person> orderedPeople = this.getOrderedPeopleByBirthDate();
+        return orderedPeople.isEmpty() ? new PersonPair() : getPersonPair(orderedPeople);
+    }
+
+    private PersonPair getPersonPair(List<Person> orderedPeople) {
+        PersonPair pair = new PersonPair();
+        pair.person1 = orderedPeople.get(0);
+        pair.person2 = orderedPeople.get(orderedPeople.size() - 1);
+        pair.dateDiff = pair.person2.getBirthDate().getTime() - pair.person1.getBirthDate().getTime();
+        return pair;
     }
 }
