@@ -1,8 +1,8 @@
 # The incomprehensible Finder Kata
 
-This kata has been done following https://www.meetup.com/es-ES/Software-Crafters-Barcelona/events/233107734/
+This kata has been done following https://www.meetup.com/es-ES/Software-Crafters-Barcelona/events/233107734/ 
 
-# Oriinal Introduction 
+Original code from: https://github.com/DoDevJutsu/incomprehensible-finder-refactoring-java
 
 Here is the bad news: the new developer you hired has written some terrible, atrocious code. 
 No one can understand what it does. 
@@ -13,7 +13,7 @@ You job is to refactor the code and make it readable, while keeping the code in 
 
 # How To Start
 
-1. Clone this repository `git clone https://github.com/DoDevJutsu/incomprehensible-finder-refactoring-java.git`
+1. Clone this repository `git clone https://github.com/jsmontesinos/kata-incomprehensible-finder.git`
 2. Install all the dependencies using Maven.
 3. Run the tests.
 4. Start refactoring! 
