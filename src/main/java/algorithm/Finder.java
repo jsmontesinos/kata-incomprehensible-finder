@@ -16,6 +16,10 @@ public class Finder {
 			return new PersonPair();
 		}
 
+		return calculatePairAccordingType(searchType, personPairList);
+	}
+
+	private PersonPair calculatePairAccordingType(SearchType searchType, List<PersonPair> personPairList) {
 		PersonPair answer = personPairList.get(0);
 		for (PersonPair result : personPairList) {
 			switch (searchType) {
@@ -32,7 +36,6 @@ public class Finder {
 					break;
 			}
 		}
-
 		return answer;
 	}
 
