@@ -8,10 +8,10 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import algorithm.PersonPair;
-import algorithm.SearchType;
-import algorithm.Finder;
-import algorithm.Person;
+import personFinder.PersonPair;
+import personFinder.SearchType;
+import personFinder.Finder;
+import personFinder.Person;
 
 public class FinderTests {
 

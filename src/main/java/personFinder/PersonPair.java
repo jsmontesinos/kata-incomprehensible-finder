@@ -1,4 +1,4 @@
-package algorithm;
+package personFinder;
 public class PersonPair {
 	public Person person1;
 	public Person person2;

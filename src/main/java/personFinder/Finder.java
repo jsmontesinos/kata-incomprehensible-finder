@@ -1,4 +1,4 @@
-package algorithm;
+package personFinder;
 import java.util.List;
 
 public class Finder {

@@ -1,4 +1,4 @@
-package algorithm;
+package personFinder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +13,12 @@ public abstract class PersonFinder {
     public PersonPair Find(SearchType searchType) {
         List<PersonPair> personPairList = getPersonPairs();
 
-        return personPairList.isEmpty() ? new PersonPair() : calculatePairAccordingType(searchType, personPairList);
+        return personPairList.isEmpty() ? new PersonPair() : findPair(searchType, personPairList);
     }
 
-    protected abstract PersonPair calculatePairAccordingType(SearchType searchType, List<PersonPair> personPairList);
+    protected abstract PersonPair findPair(SearchType searchType, List<PersonPair> personPairList);
 
-    List<PersonPair> getPersonPairs() {
+    private List<PersonPair> getPersonPairs() {
         List<PersonPair> personPairList = new ArrayList<PersonPair>();
 
         for (int i = 0; i < people.size() - 1; i++) {
