@@ -1,6 +1,10 @@
 package personFinder;
 public class PersonPair {
 
+	private Person person1;
+	private Person person2;
+	private long dateDiff;
+
 	public PersonPair() {}
 
 	public PersonPair(Person person1, Person person2) {
@@ -9,12 +13,15 @@ public class PersonPair {
 		this.dateDiff = person2.getBirthDate().getTime() - person1.getBirthDate().getTime();
 	}
 
-	public Person person1;
-	public Person person2;
-
 	public long getDateDiff() {
 		return dateDiff;
 	}
 
-	public long dateDiff;
+	public Person getPerson1() {
+		return person1;
+	}
+
+	public Person getPerson2() {
+		return person2;
+	}
 }

@@ -11,7 +11,7 @@ public class Finder {
 
 	public PersonPair Find(SearchType searchType) {
 		this.personFinder = getPersonFinderAccordingType(searchType);
-		return personFinder.Find();
+		return personFinder.findPair();
 	}
 
 	private PersonFinder getPersonFinderAccordingType(SearchType searchType) {

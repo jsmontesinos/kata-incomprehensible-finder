@@ -10,7 +10,7 @@ public class PersonFinderByMinimumDateDiff extends PersonFinder{
         super(people);
     }
 
-    protected PersonPair findPair() {
+    public PersonPair findPair() {
         List<Person> orderedPeople = this.getOrderedPeopleByBirthDate();
         return IntStream
                 .range(1, orderedPeople.size())

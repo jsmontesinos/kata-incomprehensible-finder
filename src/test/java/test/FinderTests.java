@@ -22,14 +22,14 @@ public class FinderTests {
 
 	@Before
 	public void setup() {
-		sue.name = "Sue";
-		sue.birthDate = new Date(50, 0, 1);
-		greg.name = "Greg";
-		greg.birthDate = new Date(52, 5, 1);
-		sarah.name = "Sarah";
-		sarah.birthDate = new Date(82, 0, 1);
-		mike.name = "Mike";
-		mike.birthDate = new Date(79, 0, 1);
+		sue.setName("Sue");
+		sue.setBirthDate(new Date(50, 0, 1));
+		greg.setName("Greg");
+		greg.setBirthDate(new Date(52, 5, 1));
+		sarah.setName("Sarah");
+		sarah.setBirthDate(new Date(82, 0, 1));
+		mike.setName("Mike");
+		mike.setBirthDate(new Date(79, 0, 1));
 	}
 
 	@Test
@@ -38,9 +38,9 @@ public class FinderTests {
 		Finder finder = new Finder(list);
 
 		PersonPair result = finder.Find(SearchType.Minimum);
-		assertEquals(null, result.person1);
+		assertEquals(null, result.getPerson1());
 
-		assertEquals(null, result.person2);
+		assertEquals(null, result.getPerson2());
 	}
 
 	@Test
@@ -52,8 +52,8 @@ public class FinderTests {
 
 		PersonPair result = finder.Find(SearchType.Minimum);
 
-		assertEquals(null, result.person1);
-		assertEquals(null, result.person2);
+		assertEquals(null, result.getPerson1());
+		assertEquals(null, result.getPerson2());
 	}
 
 	@Test
@@ -65,8 +65,8 @@ public class FinderTests {
 
 		PersonPair result = finder.Find(SearchType.Minimum);
 
-		assertEquals(sue, result.person1);
-		assertEquals(greg, result.person2);
+		assertEquals(sue, result.getPerson1());
+		assertEquals(greg, result.getPerson2());
 	}
 
 	@Test
@@ -79,8 +79,8 @@ public class FinderTests {
 
 		PersonPair result = finder.Find(SearchType.Maximum);
 
-		assertEquals(greg, result.person1);
-		assertEquals(mike, result.person2);
+		assertEquals(greg, result.getPerson1());
+		assertEquals(mike, result.getPerson2());
 	}
 
 	@Test
@@ -94,8 +94,8 @@ public class FinderTests {
 
 		PersonPair result = finder.Find(SearchType.Maximum);
 
-		assertEquals(sue, result.person1);
-		assertEquals(sarah, result.person2);
+		assertEquals(sue, result.getPerson1());
+		assertEquals(sarah, result.getPerson2());
 	}
 
 	@Test
@@ -110,8 +110,8 @@ public class FinderTests {
 
 		PersonPair result = finder.Find(SearchType.Minimum);
 
-		assertEquals(sue, result.person1);
-		assertEquals(greg, result.person2);
+		assertEquals(sue, result.getPerson1());
+		assertEquals(greg, result.getPerson2());
 	}
 
 }

@@ -12,11 +12,7 @@ public abstract class PersonFinder {
         this.people = people;
     }
 
-    public PersonPair Find() {
-        return findPair();
-    }
-
-    protected abstract PersonPair findPair();
+    public abstract PersonPair findPair();
 
     protected List<Person> getOrderedPeopleByBirthDate() {
         return people
