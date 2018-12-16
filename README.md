@@ -1,4 +1,8 @@
-# Introduction 
+# The incomprehensible Finder Kata
+
+This kata has been done following https://www.meetup.com/es-ES/Software-Crafters-Barcelona/events/233107734/
+
+# Oriinal Introduction 
 
 Here is the bad news: the new developer you hired has written some terrible, atrocious code. 
 No one can understand what it does. 
